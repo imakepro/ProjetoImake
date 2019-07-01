@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro Profissional</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="dessaVezEserio/default/theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- JS dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function validar() {
+      var nome = formuser.nome.value;
+      var email = formuser.email.value;
+      var senha = formuser.senha.value;
+      if (nome == "") {
+        alert('Preencha o campo nome.');
+        formuser.nome.focus();
+        return false;
+      }
+      if (email == "" || email.indexOf('@') == -1) {
+        alert('Preencha o campo E-mail.');
+        formuser.email.focus();
+        return false;
+      }
+      if (senha == "" || senha.length <= 5) {
+        alert('Preencha o campo senha com minimo 6 caracteres');
+        formuser.senha.focus();
+        return false;
+      }
+    }
+  </script>
+  <style> .floatLeft{float:left};
+    </style>
+</head>
+
+<body style="	background-image: url(&quot;tela2or3-2.png&quot;);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+  <div >
+      <br><br><br>
+    <div class="container" style="	background-color:#FAE2EE;	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+      <div class="row" style="	text-shadow: 0px 0px 20px white;">
+        <div class="col-md-8 p-4">
+          <h1>Ainda não fez seu cadastro no IMAKE?</h1>
+          <p>Cadastre-se em poucos passos e tenha acesso à incríveis conteúdos e dicas sobre oque você deseja.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 p-4" style="">
+          <img src="logo.png" alt="Logo" style="	width: 100px;	text-shadow: 0px 0px 4px whritr;">
+          <p>Um grupo de meninas determinadas a passar de ano, é isso galera.</p>
+          <p class="lead mt-3"><b>Entre em contato:</b></p>
+          <p> <a href="#">99316-0085</a> </p>
+          <p> <a href="#">imakepro@gmail.com</a> </p>
+          <p class="lead mt-3"> <b>Redes sociais</b> </p>
+              <div class="row">
+               <div class="d-flex align-items-center justify-content-center col-md-5"> 
+                <a href="https://www.facebook.com/imake.pro.5">
+                  <i class="d-block fa fa-facebook-official text-muted fa-lg mr-2"></i>
+                </a> <a href="https://www.instagram.com/imake_2019/?hl=pt-br">
+                  <i class="d-block fa fa-instagram text-muted fa-lg mx-2"></i>
+                </a> <a href="https://aboutme.google.com/u/0/?referer=gplus">
+                  <i class="d-block fa fa-google-plus-official text-muted fa-lg mx-2"></i>
+                </a> <a href="https://br.pinterest.com/imakepro/">
+                  <i class="d-block fa fa-pinterest-p text-muted fa-lg mx-2"></i>
+                </a> <a href="https://twitter.com/Imake82113863">
+                  <i class="d-block fa fa-twitter text-muted fa-lg ml-2"></i>
+                </a> </div>
+            </div>
+          <p class="lead mt-3" contenteditable="true"><b>Dúvidas e sugestões:&nbsp;</b></p>
+          <p> <a href="#">sinaraasouzaa9@gmail.com</a> </p>
+        </div>
+        <div class="col-md-7 p-4" style="">
+          <h3 class="mb-3" style="	text-shadow: 0px 0px 20px write, 0px 0px 4px write;">É rapidinho:</h3>
+            <div class="form-row">
+              <div class="form-group col-md-5 " style=""> <input type="text" id="nome" name="nome" class="w-75 mx-3 ml-5" placeholder="Digite seu nome" required="" style="	border-radius: 5px;	box-shadow: 0px 0px   #333;  padding: 2px 4px;"> </div>
+              <div class="form-group col-md-5 " style=""> <input type="text" id="nomeUsuario" name="nomeUsuario"  class="" size="22" required=""  style="	border-radius: 5px;	box-shadow: 0px 0px   #333; padding: 2px 35px;" placeholder="seu nome de login">
+              </div>
+            </div>
+            <div class="form-group" style=""> <input type="email" id="email" name="email" class="w-75 mx-5" required="" style="  border-radius: 5px;   #333; " placeholder="E-mail"> </div>
+            <div class="form-group"><input type="number" id="cpf" name="cpf" class="mx-3 w-75 ml-5" placeholder="CPF" required="" style="	border-radius: 5px;	box-shadow: 0px 0px   #333;"> </div>
+            <div class="form-row">
+              <div class="form-group col-md-5" style=""> <input type="number" class="mx-3 w-75 ml-5" id="telefone" name="telefone" required="" style="	border-radius: 5px;	box-shadow: 0px 0px   #333; padding: 2px 4px;" placeholder="Telefone"></div>
+              <div class="form-group col-md-6" style=""> <input type="text" id="endereco" name="endereco" class=""  size="22"  required="" style="	border-radius: 5px;	box-shadow: 0px 0px   #333; padding: 2px 35px;" placeholder="Endereço"></div>
+            </div>
+            <div class="form-group"> <select class="custom-select mx-3 w-75 ml-5" id="cidade" name="cidade" style="	border-radius: 5px;	box-shadow: 0px 0px   #333;" required="required">
+                <option values="1" value="manaus">Manaus</option>
+                <option values="2" value="rio preto">Rio Preto</option>
+                <option values="3" value="balbina"> Balbina</option>
+                <option values="4" value="parintins"> Parintins</option>
+                <option values="5" value="outra">Outra</option>
+              </select> </div>
+            <div class="form-group"><input id="idade" type="date" class="form-control select-date mx-3 w-75 ml-5" placeholder="Quando você nasceu catinha..." style="	border-radius: 5px;	box-shadow: 0px 0px   #333;" required="required"> </div>
+            <div class="form-group"><input type="password" id="senha" name="senha" class="mx-3 w-75 ml-5" required="" style="	border-radius: 5px;	" placeholder="Senha"></div>
+            <div class="form-group"><input type="password" id="senhac" nome="senhac" class="mx-3 w-75 ml-5" placeholder="Confirmar Senha" required="" style="	border-radius: 5px;"></div>
+            <br><br>
+            <h6 contenteditable="true" class="mx-5">Continuar como:</h6>
+            <div class="form-row">
+              <div><button type="submit" id="btnSignup" class="btn btn-dark floatLeft w-100 mx-5" onclick="cadastrarProfissional()" style="border: 1px solid; padding: 11px 21px; vertical-align: middle; border-radius: 6px; font-size: 20px; text-decoration: none;"> Profissional</button> </div>
+              <div> <button type="submit" class="btn btn-dark floatLeft w-100 mx-5" style="border:1px solid; padding: 11px 45px; vertical-align: middle;border-radius:6px; font-size: 20px; text-decoration:none;" onclick="cadastrarCliente()">Cliente</button></div>
+            </div>
+            <div class="form-check mx-5"> <input class="form-check-input" type="checkbox" id="form21" value="on" required="required"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
+            <a class="btn btn-link pi-draggable mx-5" href="paginaEntrar.html">Invés disso fazer login</a>
+            <a class="btn btn-link pi-draggable" href="index2.html" draggable="true">Voltar para a página inicial</a>
+           
+        </div>
+      </div>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyAuT9-GPapZjCWPU4cetijrmGhsTE6iKw0",
+                authDomain: "imake-projeto.firebaseapp.com",
+                databaseURL: "https://imake-projeto.firebaseio.com",
+                projectId: "imake-projeto",
+                storageBucket: "imake-projeto.appspot.com",
+                messagingSenderId: "1069998702154",
+                appId: "1:1069998702154:web:1e45e541b985f539"
+             };
+          firebase.initializeApp(firebaseConfig);
+        </script>
+      <script>
+        function cadastrarProfissional() {
+            var nome = document.getElementById('nome');
+            var nomeUsuario = document.getElementById('nomeUsuario');
+            var email = document.getElementById('email');
+            var cpf = document.getElementById('cpf');
+            var telefone = document.getElementById('telefone');
+            var endereco = document.getElementById('endereco');
+            var cidade = document.getElementById('cidade');
+            var idade = document.getElementById('idade');
+            var senha = document.getElementById('senha');
+            var senhac = document.getElementById('senhac');
+            
+            var auth = firebase.auth();
+            var promise = auth.createUserWithEmailAndPassword(email.value, senha.value);
+            firebase.database().ref('profissional/' + nome.value).set({
+                nome: nome.value,
+                nomeUsuario: nomeUsuario.value,
+                email : email.value,
+                cpf : cpf.value,
+                telefone : telefone.value,
+                endereco : endereco.value,
+                cidade : cidade.value,
+                idade : idade.value,
+                senha : senha.value,
+            });
+        }
+
+         function cadastrarCliente() {
+            var nome = document.getElementById('nome');
+            var nomeUsuario = document.getElementById('nomeUsuario');
+            var email = document.getElementById('email');
+            var cpf = document.getElementById('cpf');
+            var telefone = document.getElementById('telefone');
+            var endereco = document.getElementById('endereco');
+            var cidade = document.getElementById('cidade');
+            var idade = document.getElementById('idade');
+            var senha = document.getElementById('senha');
+            var senhac = document.getElementById('senhac');
+            
+            var auth = firebase.auth();
+            var promise = auth.createUserWithEmailAndPassword(email.value, senha.value);
+            firebase.database().ref('clientes/' + nome.value).set({
+                nome: nome.value,
+                nomeUsuario: nomeUsuario.value,
+                email : email.value,
+                cpf : cpf.value,
+                telefone : telefone.value,
+                endereco : endereco.value,
+                cidade : cidade.value,
+                idade : idade.value,
+                senha : senha.value,
+            });
+            }
+          firebase.auth().signOut()
+      </script>
+    </div>
+  </div>
+  
+</body>
+
+</html>

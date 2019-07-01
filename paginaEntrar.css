@@ -1,0 +1,32 @@
+body{
+background-image: url("solidariedade.png");
+background-size: cover;
+background-attachment:  fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-color:#000000;
+}
+.retangulo{
+width: 420px;
+height: 410px;
+background-color: #E0E0E0;
+position:absolute;
+top:50%;
+left:50%;
+opacity:1;
+margin-right: -50%;
+transform: translate(-50%, -50%)
+}
+.campo{
+background-color:#E5E5E5;
+border: 0 auto;
+}
+.form-control{
+position:relative;
+font-size: 16px;
+width: 80%;
+top:30%;
+left:50%;
+margin-right: -50%;
+transform: translate(-50%, -50%)
+}
