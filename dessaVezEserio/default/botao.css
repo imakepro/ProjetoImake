@@ -1,0 +1,274 @@
+.csstransforms  .cn-wrapper {
+   tamanho da fonte : 1em ;
+  largura : 26em ;
+  altura : 26em ;
+  estouro : oculto;
+  posição : fixa;
+  índice z : 10 ;
+  fundo : - 13em ;
+  esquerda : 50% ;
+  raio de fronteira : 50% ;
+  margin-left : - 13em ;
+  transformar : escala (0,1);
+  transição : tudo. 3s facilidade;
+}
+/ * class aplicada ao contêiner via JavaScript que irá escalar a navegação para cima * / 
+.csstransforms  .opened-nav {
+   border-radius : 50% ;
+  transformar : escala (1);
+}
+
+.cn-button {
+   border : none;
+  fundo : nenhum;
+  cor : branco;
+  texto-alinhar : Centro;
+  tamanho da fonte : 1.5em ;
+  fundo de enchimento : 1em ;
+  altura : 3,5em ;
+  largura : 3.5em ;
+  background-color : # 111 ;
+  posição : fixa;
+  esquerda : 50% ;
+  margem esquerda : -1,75em ;
+  fundo : - 1,75em ;
+  raio de fronteira : 50% ;
+  cursor : ponteiro;
+  z-index : 11
+}
+Botão .cn : foco ,
+ botão .cn : ativo ,
+ botão .cn : foco {
+   background-color : # 222 ;
+}
+.cn-overlay {
+   largura : 100% 
+  altura: 100% ;
+  cor de fundo : rgba (0,0,0,0,6);
+  posição : fixa;
+  top : 0 ;
+  esquerda : 0 ;
+  fundo : 0 ;
+  direita : 0 ;
+  opacidade : 0 ;
+  transição : tudo. 3s facilidade;
+  índice z : 2 ;
+  eventos-ponteiro : nenhum;
+}
+
+/ * Classe adicionada à sobreposição via JavaScript para mostrá-la quando a navegação estiver aberta * / 
+.cn-overlay .on-overlay {
+   pointer-events : auto;
+  opacidade : 1 ;
+}
+
+.csstransforms  .cn-wrapper  li {
+   posição : absoluto;
+  tamanho da fonte : 1.5em ;
+  largura : 10em ;
+  altura : 10em ;
+  Transformar-origem : 100%  100% ;
+  estouro : oculto;
+  esquerda : 50% ;
+  topo : 50% ;
+  margem superior : - 1.3em ;
+  margem esquerda : - 10em ;
+  transição : fronteira. 3s facilidade;
+}
+
+.csstransforms  .cn-wrapper  li  a {
+   display : bloco;
+  tamanho da fonte : 1.18em ;
+  altura : 14,5em ;
+  largura : 14,5em ;
+  posição : absoluta;
+  fundo : - 7.25em ;
+  direita : - 7.25em ;
+  raio de fronteira : 50% ;
+  text-decoration : nenhum;
+  cor : #fff ;
+  topo de enchimento : 1.8em ;
+  texto-alinhar : centro;
+  transformar : inclinar (-50deg) girar (-70deg) escala (1);
+  transição : opacidade 0.3s , cor 0.3s ;
+}
+
+.csstransforms  .cn-wrapper  li  a  span {
+   tamanho da fonte : 1.1em ;
+  opacidade : 0,7 ;
+}
+/ * para um ângulo central x, os itens da lista devem estar inclinados em 90-x graus
+no nosso caso x = 40deg então o ângulo de inclinação é 50deg
+os itens devem ser girados por x, menos (soma de ângulos - 180) 2s (para esta demonstração) * /
+
+.csstransforms  .cn-wrapper  li : primeiro filho {
+   transform : rotate (-10deg) skew (50deg);
+}
+
+.csstransforms  .cn-wrapper  li : nth-child (2) {
+   transformar : rotação (30deg) inclinação (50deg);
+}
+
+.csstransforms  .cn-wrapper  li : nth-child (3) {
+   transformar : girar (70deg) inclinação (50deg)
+}
+
+.csstransforms  .cn-wrapper  li : nth-child (4) {
+   transformar : rotação (110deg) inclinação (50deg);
+}
+
+.csstransforms  .cn-wrapper  li : nth-child (5) {
+   transformar : girar (150deg) inclinação (50deg);
+}
+
+.csstransforms  .cn-wrapper  li : n-filho (ímpar)  a {
+   cor de fundo : # a11313 ;
+  cor de fundo : hsla (0, 88%, 63%, 1);
+}
+
+.csstransforms  .cn-wrapper  li : n-filho (par)  a {
+   background-color : # a61414 ;
+  cor de fundo : hsla (0, 88%, 65%, 1);
+}
+
+/ * estilo ativo * / 
+.csstransforms  .cn-wrapper  li .active  a {
+   cor de fundo : # b31515 ;
+  cor de fundo : hsla (0, 88%, 70%, 1);
+}
+
+/ * estilo de passar o mouse * / 
+.csstransforms  .cn-wrapper  li : não (.active)  a : hover ,
+ .csstransforms  .cn-wrapper  li : não (.active)  a : ativo ,
+ .csstransforms  .cn-wrapper  li : não ( .active)  a : focus {
+   cor de fundo : # b31515 ;
+  cor de fundo : hsla (0, 88%, 70%, 1);
+}
+.csstransforms  .cn-wrapper  li : não (.active)  a : focus {
+   posição : fixa; / * corrigir o bug "deslocamento" em navegadores webkit ao usar a tecla tab * /
+}
+.no-csstransforms  .cn-wrapper {
+   font-size : 1em ;
+  altura : 5em ;
+  largura : 25.15em ;
+  fundo : 0 ;
+  margem esquerda : - 12,5em ;
+  estouro : oculto;
+  posição : fixa;
+  índice z : 10 ;
+  esquerda : 50% ;
+  border : 1px solid #ddd ;
+}
+
+.no-csstransforms  .cn-button {
+   exibição : nenhum;
+}
+
+.no-csstransforms  .cn-wrapper  li {
+   posição : estática;
+  flutuar : esquerda;
+  tamanho da fonte : 1em ;
+  altura : 5em ;
+  largura : 5em ;
+  cor de fundo : #eee ;
+  texto-alinhar : centro;
+  altura da linha : 5em ;
+}
+
+.no-csstransforms  .cn-wrapper  li  a {
+   display : bloco;
+  largura : 100% ;
+  altura : 100% ;
+  text-decoration : nenhum;
+  cor : herdar;
+  tamanho da fonte : 1.3em ;
+  borda direita : 1px sólido #ddd ;
+}
+
+.no-csstransforms  .cn-wrapper  li  a : último filho {
+   fronteira : nenhum;
+}
+
+.no-csstransforms  .cn-wrapper  li  a : hover ,
+ .no-csstransforms  .cn-wrapper  li  a : ativo ,
+ .no-csstransforms  .cn-wrapper  li  um : Foco {
+   background-color : white;
+}
+
+.no-csstransforms  .cn-wrapper  li .active  a {
+   cor de fundo : # 6F325C ;
+  cor : #fff ;
+}.no-csstransforms  .cn-wrapper {
+   font-size : 1em ;
+  altura : 5em ;
+  largura : 25.15em ;
+  fundo : 0 ;
+  margem esquerda : - 12,5em ;
+  estouro : oculto;
+  posição : fixa;
+  índice z : 10 ;
+  esquerda : 50% ;
+  border : 1px solid #ddd ;
+}
+
+.no-csstransforms  .cn-button {
+   exibição : nenhum;
+}
+
+.no-csstransforms  .cn-wrapper  li {
+   posição : estática;
+  flutuar : esquerda;
+  tamanho da fonte : 1em ;
+  altura : 5em ;
+  largura : 5em ;
+  cor de fundo : #eee ;
+  texto-alinhar : centro;
+  altura da linha : 5em ;
+}
+
+.no-csstransforms  .cn-wrapper  li  a {
+   display : bloco;
+  largura : 100% ;
+  altura : 100% ;
+  text-decoration : nenhum;
+  cor : herdar;
+  tamanho da fonte : 1.3em ;
+  borda direita : 1px sólido #ddd ;
+}
+
+.no-csstransforms  .cn-wrapper  li  a : último filho {
+   fronteira : nenhum;
+}
+
+.no-csstransforms  .cn-wrapper  li  a : hover ,
+ .no-csstransforms  .cn-wrapper  li  a : ativo ,
+ .no-csstransforms  .cn-wrapper  li  um : Foco {
+   background-color : white;
+}
+
+.no-csstransforms  .cn-wrapper  li .active  a {
+   cor de fundo : # 6F325C ;
+  cor : #fff ;
+}
+@ media screen e (max-width: 480px ) {
+   .csstransforms.cn  -wrapper {
+     tamanho da fonte :. 68em ;
+  }
+  botão .cn {
+     font-size : 1em ;
+  }
+  .csstransforms  .cn-wrapper  li {
+     tamanho da fonte : 1.52em ;
+  }
+}
+
+@ media screen e (max-width: 320px ) {
+   .no-csstransforms.cn  -wrapper {
+     largura : 15.15px ;
+    margem esquerda : - 7,5em ;
+  }
+  .no-csstransforms  .cn-wrapper  li {
+     altura : 3em ;
+    largura : 3em ;
+  }
+}
